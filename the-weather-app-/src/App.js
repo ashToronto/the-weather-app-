@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
-class app extends React.Component {
-  render()
+import './App.css';
+
+class App extends Component {
+  render() {
     return (
-      <div>I'm refreshing my react memory with this project</div>
+      <div>
+        <h1>My React app</h1>
+      </div>
     );
+  }
 }
+
+export default App;
