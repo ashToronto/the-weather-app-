@@ -40,10 +40,11 @@ class App extends React.Component {
     // Placing conditionality when text fields are left blank
     if (country && city) {
       // Log API data in browser terminal
-      console.log(data)
+      console.log(data);
 
       // changing the state to JSON object attributes dynamically
       // Search for where the data lives in the JSON object
+      // Return an error with all other Json obj attr undefined if city and country not entered
       this.setState({
           temperature: data.main.temp,
           city: data.name,
@@ -52,17 +53,15 @@ class App extends React.Component {
           description: data.weather[0].description,
           error: ""
       });
-    }
-    // Return an error with all other Json obj attr undefined
-    else {
-      this.setState =  {
+    } else {
+      this.setState ({
         temperature: undefined,
         city: undefined,
         country: undefined,
         humidity: undefined,
         description: undefined,
         error: "You have not entered your location"
-      }
+      });
     }
   }
 
@@ -78,6 +77,7 @@ class App extends React.Component {
           country = {this.state.country}
           description = {this.state.description}
           humidity = {this.state.humidity}
+          error = {this.state.error}
           />
       </div>
     );
