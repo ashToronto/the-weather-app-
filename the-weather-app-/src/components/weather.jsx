@@ -1,5 +1,7 @@
 import React from 'react';
 
+// If country and city don't exist or are not written in Form
+// Do not get the data
 class Weather extends React.Component {
   render() {
     return (

@@ -35,18 +35,35 @@ class App extends React.Component {
     // Wait for data to come in before proceeding
     const data = await api_call.json();
 
-    // Log API data in browser terminal
-    console.log(data)
-    // changing the state to JSON object attributes dynamically
-    // Search for where the data lives in the JSON object
-    this.setState({
-        temperature: data.main.temp,
-        city: data.name,
-        country: data.sys.country,
-        humidity: data.main.humidity,
-        description: data.weather[0].description,
-        error: ""
-    });
+
+
+    // Placing conditionality when text fields are left blank
+    if (country && city) {
+      // Log API data in browser terminal
+      console.log(data)
+
+      // changing the state to JSON object attributes dynamically
+      // Search for where the data lives in the JSON object
+      this.setState({
+          temperature: data.main.temp,
+          city: data.name,
+          country: data.sys.country,
+          humidity: data.main.humidity,
+          description: data.weather[0].description,
+          error: ""
+      });
+    }
+    // Return an error with all other Json obj attr undefined
+    else {
+      this.setState =  {
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        description: undefined,
+        error: "You have not entered your location"
+      }
+    }
   }
 
   // Generate view with dynamic JSON data
