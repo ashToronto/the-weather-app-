@@ -1,10 +1,12 @@
-# A Weather app
+# The Weather app
 =====================
 
-A simple weather app powered by React. Uses the Open weather API to fetch current weather data globally.
+A simple weather app powered by React. Uses the Open weather API to fetch current weather data from different cities around the world.
 
 ## Final Product
-
+![""](https://github.com/ashToronto/the-weather-app-/blob/master/the-weather-app-/docs/Screen%20Shot%202018-06-24%20at%201.48.05%20PM.png?raw=true)
+![""](https://github.com/ashToronto/the-weather-app-/blob/master/the-weather-app-/docs/Screen%20Shot%202018-06-24%20at%201.48.49%20PM.png?raw=true)
+![""](https://github.com/ashToronto/the-weather-app-/blob/master/the-weather-app-/docs/Screen%20Shot%202018-06-24%20at%201.49.04%20PM.png?raw=true)
 
 ## Development Dependencies
 
